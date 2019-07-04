@@ -13,11 +13,8 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    contents: |
-     **/classes/APTS*
-     **/pages/APTS*
-     **/triggers/APTS*
-    targetFolder: $(Build.ArtifactStagingDirectory)
+         Contents: '**'
+         targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
